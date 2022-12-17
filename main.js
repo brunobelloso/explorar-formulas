@@ -1,5 +1,4 @@
 const inicio = document.getElementById("output").innerHTML;
-let historial = [];
 function generarNumero() {
   return Math.floor(Math.random() * formulas.length);
 }
@@ -9,7 +8,6 @@ function generarFormula() {
   if (document.getElementById("boton").onclick) {
     document.getElementById("output").innerHTML = formulas[numero];
     document.getElementById("numeroFormula").innerText = "#" + String(numero);
-    historial.push(numero);
     numero = generarNumero();
   }
 }
